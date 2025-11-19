@@ -12,28 +12,47 @@ A [Claude Code](https://docs.claude.com/en/docs/claude-code) skill that provides
 
 ## Installation
 
-### Quick Install
+### Option 1: Plugin Installation (Recommended)
+
+Install via Claude Code's plugin system for automatic updates:
+
+```bash
+# Add this repository as a marketplace
+/plugin marketplace add esparkman/claude-rubycritic-skill
+
+# Install the plugin
+/plugin install rubycritic-skill@rubycritic-skill
+
+# Install RubyCritic gem
+gem install rubycritic
+```
+
+### Option 2: Manual Installation
 
 ```bash
 # Clone the repository
-git clone https://github.com/YOUR_USERNAME/claude-rubycritic-skill.git
+git clone https://github.com/esparkman/claude-rubycritic-skill.git
 cd claude-rubycritic-skill
 
 # Run the install script
 ./install.sh
 ```
 
-### Manual Install
+Or manually:
 
 ```bash
-# Create the skills directory
-mkdir -p ~/.claude/skills/rubycritic
+# Clone to temporary location
+git clone https://github.com/esparkman/claude-rubycritic-skill.git /tmp/rubycritic-temp
 
-# Copy the skill file
-cp SKILL.md ~/.claude/skills/rubycritic/
+# Copy the skill folder
+mkdir -p ~/.claude/skills
+cp -r /tmp/rubycritic-temp/skills/rubycritic-skill ~/.claude/skills/
 
 # Install RubyCritic gem
 gem install rubycritic
+
+# Clean up
+rm -rf /tmp/rubycritic-temp
 ```
 
 For detailed installation instructions, see [INSTALLATION.md](INSTALLATION.md).
@@ -148,9 +167,10 @@ claude /rubycritic app/services/user_service.rb
 ## Troubleshooting
 
 **Skill not appearing?**
-- Verify file is at `~/.claude/skills/rubycritic/SKILL.md`
+- Plugin install: Verify with `/plugin list`
+- Manual install: Check file is at `~/.claude/skills/rubycritic-skill/SKILL.md`
 - Restart Claude Code
-- Check file permissions: `chmod 755 ~/.claude/skills/rubycritic/SKILL.md`
+- Run `/help` to see available skills
 
 **RubyCritic not found?**
 - Install globally: `gem install rubycritic`
@@ -165,13 +185,12 @@ See [INSTALLATION.md](INSTALLATION.md) for more troubleshooting tips.
 
 ## Contributing
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+Contributions are welcome! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for detailed guidelines on:
 
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
+- Reporting bugs and requesting features
+- Submitting pull requests
+- Development workflow and testing
+- Documentation standards
 
 ## License
 
