@@ -1,0 +1,21 @@
+{
+  "name": "rubycritic-skill",
+  "version": "1.0.0",
+  "description": "Claude Code Skill for Ruby code quality analysis with RubyCritic. Model-invoked - Claude autonomously analyzes code quality, identifies smells, and provides refactoring insights.",
+  "author": {
+    "name": "Evan Sparkman"
+  },
+  "license": "MIT",
+  "repository": "https://github.com/esparkman/claude-rubycritic-skill",
+  "keywords": [
+    "claude-skill",
+    "claude-code",
+    "ruby",
+    "rails",
+    "rubycritic",
+    "code-quality",
+    "static-analysis",
+    "refactoring",
+    "model-invoked"
+  ]
+}

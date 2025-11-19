@@ -1,0 +1,38 @@
+{
+  "name": "rubycritic-skill",
+  "owner": {
+    "name": "esparkman",
+    "email": "sparkman.evan@gmail.com"
+  },
+  "metadata": {
+    "description": "RubyCritic code quality analysis skill for Ruby and Rails projects",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "rubycritic-skill",
+      "source": "./",
+      "description": "Analyze Ruby and Rails code quality with RubyCritic. Identifies code smells, complexity issues, and refactoring opportunities. Provides detailed metrics, scores files A-F, compares branches, and prioritizes high-churn problem areas.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Evan Sparkman"
+      },
+      "homepage": "https://github.com/esparkman/claude-rubycritic-skill",
+      "repository": "https://github.com/esparkman/claude-rubycritic-skill",
+      "license": "MIT",
+      "keywords": [
+        "claude-skill",
+        "claude-code",
+        "ruby",
+        "rails",
+        "rubycritic",
+        "code-quality",
+        "static-analysis",
+        "refactoring",
+        "model-invoked"
+      ],
+      "category": "code-quality",
+      "tags": ["ruby", "rails", "code-quality", "rubycritic", "refactoring"]
+    }
+  ]
+}
