@@ -91,6 +91,17 @@ How has code quality changed since the main branch?
 
 Claude will automatically invoke RubyCritic and provide detailed analysis with actionable insights.
 
+## Available Capabilities
+
+The skill provides several types of analysis you can request:
+
+| Capability | What to Ask | What You Get |
+|------------|-------------|--------------|
+| **Full Analysis** | "Analyze the code quality of [path]" | Complete breakdown of metrics, scores, and smells for files |
+| **Summary** | "Give me a code quality summary" | Quick overview of overall project health without file details |
+| **Worst Files** | "Show me the worst files" or "Find the 5 lowest scoring files" | Prioritized list of files needing immediate attention |
+| **Branch Comparison** | "Compare code quality with main branch" | Diff showing quality improvements or regressions between branches |
+
 ## What Claude Can Do
 
 When you ask about code quality, Claude will:
